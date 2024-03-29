@@ -7,13 +7,7 @@ LIC_FILES_CHKSUM = "file://${COREBASE}/meta/files/common-licenses/Apache-2.0;md5
 FILESEXTRAPATHS:prepend := "${THISDIR}/linux-aspeed:"
 
 SRC_URI = "git://github.com/amd/apml_modules;protocol=https;branch=master"
-
-SRC_URI += "file://0001-sbtsi-Handle-i2c-probe-as-per-kernel-version.patch \
-            file://0002-sbrmi-Handle-i2c-probe-as-per-kernel-version.patch \
-            file://0003-sbrmi-apml_alertl-remove-obsolete-of_get_gpio.patch \
-"
-
-SRCREV = "ce41d37a9dc988b1cbde7c23d4349c8079783921"
+SRCREV = "a12585ae1717521d63cfda545608069e0ac05da0" 
 
 S = "${WORKDIR}/git"
 
