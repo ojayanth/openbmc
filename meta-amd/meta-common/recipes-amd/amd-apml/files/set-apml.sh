@@ -32,6 +32,14 @@ DEV_I3C_SBRMI_PATH="/sys/bus/i3c/drivers/sbrmi_i3c"
 DEV_I3C_SBRMI_4="4-22400000002"
 DEV_I3C_SBRMI_5="5-22400000002"
 
+# Load sbrmi and sbtsi modules
+load_modules ()
+{
+    echo "Adding sbrmi and sbtsi modules"
+    modprobe apml_sbrmi   
+    modprobe apml_sbtsi
+}
+
 # Set i2c APML
 set_i2c_apml()
 {
@@ -207,12 +215,15 @@ elif [[ $1 == "unbind" ]];then
         echo "UnBind I3C Drivers"
         unbind_i3c_drivers
     fi
+elif [[ $1 == "load" ]];then
+    load_modules
 else
     echo "set-apml.sh takes a single string as input"
     echo "    i3c    = set APML to I3C mode, and Reboot"
     echo "    i2c    = set APML to I2C mode, and Reboot"
     echo "    bind   = Bind   I2C/I3C drivers for APML"
     echo "    unbind = Unbind I2C/I3C drivers for APML"
+    echo "    load   = Load sbrmi/sbtsi driver modules"
     echo "APML mode is"
     fw_printenv |grep apml_i3c
 fi
