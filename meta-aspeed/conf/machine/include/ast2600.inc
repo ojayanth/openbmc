@@ -16,3 +16,6 @@ UBOOT_LOADADDRESS ?= "0x80001000"
 
 QB_MACHINE = "-machine ast2600-evb"
 QB_MEM = "-m 1G"
+
+PREFERRED_VERSION_u-boot-aspeed-sdk = "v2019.04+%"
+PREFERRED_VERSION_u-boot-fw-utils-aspeed-sdk = "v2019.04+%"
