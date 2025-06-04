@@ -1,0 +1,16 @@
+Common targets are:
+
+     obmc-phosphor-image: Includes OpenBMC Phosphor userspace and Web UI
+
+     core-image-minimal: A small image just capable of allowing a device to boot
+
+     core-image-full-cmdline: A small image with more Linux functionality
+                              installed, including a ssh server.
+
+Note that the core targets will not set the default phosphor password.
+
+Boot MCU support is implemented using Yocto multiconfig.
+The configuration for the bootmcu can be found under:
+  meta-aspeed/conf/multiconfig/bootmcu.conf
+To build boot MCU image:
+  bitbake mc:bootmcu:virtual/bootmcu

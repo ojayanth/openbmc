@@ -30,6 +30,9 @@ covered by [Jenkins](https://jenkins.openbmc.org/job/ci-openbmc/) CI testing.
 * evb
   * evb-ast2500
   * evb-ast2600
+  * evb-ast2700
+  * evb-ast2700-emmc
+  * evb-ast2700-ufs
   * evb-npcm750
   * evb-npcm845
   * fvp
