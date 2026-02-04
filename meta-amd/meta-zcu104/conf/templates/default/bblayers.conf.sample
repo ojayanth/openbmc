@@ -1,0 +1,26 @@
+BBPATH = "${TOPDIR}"
+BBFILES ?= ""
+
+BBLAYERS ?= " \
+  ##OEROOT##/meta \
+  ##OEROOT##/meta-openembedded/meta-oe \
+  ##OEROOT##/meta-openembedded/meta-networking \
+  ##OEROOT##/meta-openembedded/meta-python \
+  ##OEROOT##/meta-openembedded/meta-filesystems \
+  ##OEROOT##/meta-phosphor \
+  ##OEROOT##/meta-arm/meta-arm \
+  ##OEROOT##/meta-arm/meta-arm-toolchain \
+  ##OEROOT##/meta-security \
+  ##OEROOT##/meta-security/meta-tpm \
+  ##OEROOT##/meta-virtualization \
+  ##OEROOT##/meta-amd \
+  ##OEROOT##/meta-amd/meta-zcu104 \
+  ##OEROOT##/meta-xilinx/meta-xilinx-core \
+  ##OEROOT##/meta-xilinx/meta-xilinx-bsp \
+  ##OEROOT##/meta-xilinx/meta-microblaze \
+  ##OEROOT##/meta-xilinx/meta-xilinx-multimedia \
+  ##OEROOT##/meta-xilinx/meta-xilinx-virtualization \
+  ##OEROOT##/meta-xilinx/meta-xilinx-standalone \
+  ##OEROOT##/meta-xilinx/meta-xilinx-standalone-sdt \
+  ##OEROOT##/meta-amd-adaptive-socs/meta-amd-adaptive-socs-bsp \
+  "
